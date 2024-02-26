@@ -1,0 +1,12 @@
+This is a demonstration of using leveldb with go-libp2p.
+
+$ go install github.com/fgergo/p2pecho.with.leveldb@latest
+
+In the first terminal window:
+$ mkdir -p /tmp/d1 && cd /tmp/d1 && p2pecho.with.leveldb -l 10000
+
+In the second terminal window, follow instructions in displayed in first terminal window, similar to this:
+$ mkdir -p /tmp/d2 && cd /tmp/d2 && p2pecho.with.leveldb -l 10001 -d /ip4/127.0.0.1/tcp/10000/p2p/QmUD2KWcEyjVkFv4LnRRmJ8aURJC6X35oqUmyzYrtn3ERr
+
+To dump db with timestamps:
+$ cd /tmp/d1 && p2pecho.with.leveldb -D
